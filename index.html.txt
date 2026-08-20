@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Tigers Are My Favorite Animal</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #17120f;
+            color: #f5eee5;
+            line-height: 1.7;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(20, 15, 12, 0.95);
+            padding: 15px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            border-bottom: 1px solid #8f4d20;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #f28c28;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: #f5eee5;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #f28c28;
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 120px 20px 60px;
+            background:
+                linear-gradient(rgba(23, 18, 15, 0.55), rgba(23, 18, 15, 0.9)),
+                url("tiger.jpg") center/cover no-repeat;
+        }
+
+        .hero-content {
+            max-width: 900px;
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 8vw, 7rem);
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            color: #f28c28;
+            text-shadow: 4px 4px 0 #111;
+        }
+
+        .hero p {
+            font-size: 1.4rem;
+            max-width: 700px;
+            margin: 20px auto;
+        }
+
+        .hero-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 13px 30px;
+            background: #f28c28;
+            color: #17120f;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .hero-button:hover {
+            background: #ffad4d;
+            transform: translateY(-3px);
+        }
+
+        /* Sections */
+        section {
+            padding: 90px 10%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.7rem;
+            color: #f28c28;
+            margin-bottom: 45px;
+        }
+
+        .intro {
+            max-width: 900px;
+            margin: auto;
+            font-size: 1.15rem;
+            text-align: center;
+        }
+
+        /* Cards */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: #241b16;
+            padding: 30px;
+            border-radius: 10px;
+            border-top: 5px solid #f28c28;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            background: #2e211a;
+        }
+
+        .card h3 {
+            color: #f28c28;
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+        }
+
+        /* Personal Story */
+        .story {
+            background: #211812;
+        }
+
+        .story-container {
+            max-width: 950px;
+            margin: auto;
+        }
+
+        .story-container p {
+            margin-bottom: 25px;
+            font-size: 1.08rem;
+        }
+
+        /* Quote */
+        .quote {
+            text-align: center;
+            padding: 100px 10%;
+            background: #0f0c0a;
+        }
+
+        .quote blockquote {
+            max-width: 900px;
+            margin: auto;
+            font-size: 2rem;
+            font-style: italic;
+            color: #f5eee5;
+        }
+
+        .quote span {
+            display: block;
+            margin-top: 20px;
+            color: #f28c28;
+            font-weight: bold;
+        }
+
+        /* Symbolism */
+        .symbolism {
+            max-width: 1000px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .symbolism p {
+            font-size: 1.15rem;
+        }
+
+        .highlight {
+            color: #f28c28;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 35px;
+            background: #0c0907;
+            border-top: 1px solid #8f4d20;
+        }
+
+        footer p {
+            color: #aaa;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 800px) {
+            nav {
+                padding: 15px 5%;
+            }
+
+            nav ul {
+                gap: 10px;
+            }
+
+            nav a {
+                font-size: 0.85rem;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 70px 7%;
+            }
+
+            .quote blockquote {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 500px) {
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">🐅 TIGER</div>
+
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#story">My Connection</a></li>
+            <li><a href="#qualities">Qualities</a></li>
+            <li><a href="#meaning">Meaning</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Tigers</h1>
+
+            <p>
+                More than my favorite animal — a symbol of
+                strength, independence, resilience, and quiet confidence.
+            </p>
+
+            <a href="#about" class="hero-button">
+                Discover Why
+            </a>
+        </div>
+    </header>
+
+    <!-- About -->
+    <section id="about">
+        <h2 class="section-title">Why Tigers Are My Favorite</h2>
+
+        <div class="intro">
+            <p>
+                Tigers have always stood out to me in a way other animals don't.
+                Through documentaries, artwork, stories, movies, and photographs,
+                they have continually left an impression on me.
+            </p>
+
+            <br>
+
+            <p>
+                Their presence is unforgettable — calm, powerful, and aware.
+                Over time, the tiger became more than an animal I liked.
+                It became a symbol of qualities I admire and try to carry
+                with me in my own life.
+            </p>
+        </div>
+    </section>
+
+    <!-- Personal Story -->
+    <section id="story" class="story">
+        <h2 class="section-title">My Connection With Tigers</h2>
+
+        <div class="story-container">
+
+            <p>
+                Tigers have been part of my life even though I haven't grown
+                up around them physically. I encountered them through images,
+                documentaries, stories, and artwork. Every time I saw one,
+                something about its presence caught my attention.
+            </p>
+
+            <p>
+                When I think about tigers, I feel a mixture of
+                <span class="highlight">respect, inspiration, and grounding.</span>
+                They represent a kind of strength that doesn't need to be loud.
+                A tiger doesn't need to constantly prove its power.
+            </p>
+
+            <p>
+                That idea resonates with me. There have been moments in my life
+                when I've needed to remain strong quietly and push through
+                challenges without recognition. The tiger reminds me that
+                strength can be calm, focused, and resilient.
+            </p>
+
+            <p>
+                Tigers also represent independence. They move with intention,
+                rely on their own abilities, and remain patient while waiting
+                for the right moment.
+            </p>
+
+        </div>
+    </section>
+
+    <!-- Quote -->
+    <section class="quote">
+        <blockquote>
+            "Real strength doesn't always announce itself."
+        </blockquote>
+
+        <span>— What the Tiger Represents to Me</span>
+    </section>
+
+    <!-- Qualities -->
+    <section id="qualities">
+        <h2 class="section-title">What Tigers Represent</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Quiet Strength</h3>
+                <p>
+                    Tigers demonstrate that power doesn't have to be loud.
+                    Their strength comes with control, confidence, and purpose.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Independence</h3>
+                <p>
+                    Tigers are largely solitary animals. Their independence
+                    represents the ability to rely on yourself and your own
+                    abilities.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Resilience</h3>
+                <p>
+                    Tigers symbolize perseverance and the determination to
+                    continue moving forward despite challenges.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Focus</h3>
+                <p>
+                    Tigers are patient and deliberate. They don't waste energy
+                    unnecessarily and remain focused on their surroundings.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Beauty</h3>
+                <p>
+                    Their stripes, eyes, movement, and physical presence make
+                    tigers one of the most visually striking animals on Earth.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Courage</h3>
+                <p>
+                    Across different cultures, tigers have represented courage,
+                    protection, authority, and strength.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Meaning -->
+    <section id="meaning">
+        <h2 class="section-title">Your Thoughts, Captured</h2>
+
+        <div class="symbolism">
+            <p>
+                Tigers matter to me because they reflect the kind of strength
+                I value:
+            </p>
+
+            <br>
+
+            <p class="highlight">
+                Calm. Focused. Resilient. Independent.
+            </p>
+
+            <br>
+
+            <p>
+                They've been part of my life through the stories and images
+                that shaped my imagination. Over time, the tiger became a
+                symbol of qualities I admire in myself and want to continue
+                developing.
+            </p>
+
+            <br>
+
+            <p>
+                Others may appreciate tigers for their beauty and power,
+                but for me, they represent something deeper: the ability to
+                command respect without needing to demand attention.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>🐅 My Favorite Animal: The Tiger</p>
+        <p>Strength doesn't always have to roar.</p>
+    </footer>
+
+</body>
+</html>tiger.jpg
